@@ -5,7 +5,7 @@
 
 <dt>
 	<% @animals.each do |animal| %>
-		<dl><%= animal.name %></dl>
+		<dl><a href ="/animals/<%= animal.id %>"><%= animal.name %></dl>
 	<% end %>
 </dt>
 
