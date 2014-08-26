@@ -28,4 +28,14 @@ class AnimalsController < ApplicationController
  		@animal = Animal.find(params[:id])
  		render('animals/edit.html.erb')
  	end
+
+ 	def update
+ 		@animal = Animal.find(params[:id])
+ 		if @animal.update(params[:animal])
+ 			flash[:notice] = "The animal was updated."
+ 			redirect_to("/animals/#{@animal.id}")
+ 		else
+ 			render('animals/edit.html.erb')
+ 		end
+ 	end
 end
