@@ -18,6 +18,12 @@ class TraitsController < ApplicationController
 
 	def show
 		@trait = Trait.find(params[:id])
-		render ('traits/show.html.erb')
+		render('traits/show.html.erb')
 	end
+
+	def edit
+		@trait = Trait.find(params[:id])
+		render('traits/edit.html.erb')
+	end
+
 end
