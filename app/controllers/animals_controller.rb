@@ -38,4 +38,11 @@ class AnimalsController < ApplicationController
  			render('animals/edit.html.erb')
  		end
  	end
+
+ 	def destroy
+ 		@animal = Animal.find(params[:id])
+ 		@animal.destroy
+ 		flash[:notcie] = "Animal deleted."
+ 		redirect_to("/animals")
+ 	end
 end
