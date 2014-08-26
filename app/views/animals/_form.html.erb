@@ -14,4 +14,12 @@
     <input id="animal_species" name="animal[species]" type="text" value="<%= @animal.species %>">
   </div>
 </div>
+<div class='row'>
+  <div class='form-group'>
+    <label for "trait_id">Traits</label>
+    <% @traits.each do |trait| %>
+    <input id="trait_id" name="traits[]" type="checkbox" value="<%= trait.id %>"><%= trait.name %></input>
+  <% end %>
+  </div>
+</div>
 

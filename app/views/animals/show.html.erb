@@ -3,5 +3,11 @@
 <h2><%= @animal.name %></h2>
 <h4>Animal type: <%= @animal.species %></h4>
 <h4>Age: <%= @animal.age %></h4>
+<h4>Traits:</h4>
+	 <ul>
+	 	<% @animal.traits.each do |trait|%>
+	 		<li><a href ="/traits/<%= trait.id %>"><%=trait.name%></a></li>
+	 	<% end %>
+	 </ul>
 
 <a href="/animals/<%= @animal.id %>/edit"><p>Edit Animal Info</p></a>

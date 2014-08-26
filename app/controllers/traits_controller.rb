@@ -36,5 +36,12 @@ class TraitsController < ApplicationController
  		end
 	end
 
+	def destroy
+		@trait = Trait.find(params[:id])
+		@trait.destroy
+		flash[:notice] = "Trait was successfully deleted."
+		redirect_to("/traits/")
+	end
+
 
 end
