@@ -13,4 +13,15 @@ class AnimalsController < ApplicationController
  		@animal = Animal.new(params[:animal])
  		render ('animals/new.html.erb')
  	end
+
+ 	def create
+ 		@animal = Animal.new(params[:animal])
+ 		if @animal.save
+ 			flash[:notice] = "The Animal was successfully added."
+ 			redirect_to("/animals/#{@animal.id}")
+ 		else
+ 			render('animals/new.html.erb')
+ 		end
+ 	end
+
 end
