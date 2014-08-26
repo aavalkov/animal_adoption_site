@@ -24,4 +24,8 @@ class AnimalsController < ApplicationController
  		end
  	end
 
+ 	def edit
+ 		@animal = Animal.find(params[:id])
+ 		render('animals/edit.html.erb')
+ 	end
 end
