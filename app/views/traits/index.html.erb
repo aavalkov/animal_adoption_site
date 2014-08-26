@@ -4,7 +4,7 @@
 
 <ul>
 	<% @traits.each do |trait| %>
-		<li><%= trait.name %></li>
+		<li><a href="/traits/<%= trait.id %>"><%= trait.name %></a></li>
 		<% end %>
 </ul>
 

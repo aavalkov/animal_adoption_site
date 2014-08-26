@@ -26,4 +26,15 @@ class TraitsController < ApplicationController
 		render('traits/edit.html.erb')
 	end
 
+	def update
+		@trait = Trait.find(params[:id])
+		if @trait.update(params[:trait])
+			flash[:notice] = "Trait was successfully updated."
+ 			redirect_to("/traits/#{@trait.id}")
+ 		else
+ 			render('traits/edit.html.erb')
+ 		end
+	end
+
+
 end

@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   match('traits', {via: :get, to: 'traits#new'})
   match('traits/:id', {via: :get, to: 'traits#show'})
   match('traits/:id/edit', {via: :get, to: 'traits#edit'})
+  match('traits/:id', {via: [:patch, :put], to: 'traits#update'})
 end
