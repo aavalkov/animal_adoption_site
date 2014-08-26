@@ -1,0 +1,9 @@
+<h1> Four Paws </h1>
+<h2>Animals Traits</h2>
+
+<p><strong>Add a new trait</strong><p>
+	<%= render('layouts/errors', :object => @trait)%>
+	<form action = "/tags" method="post">
+   	<%= render('form') %>
+    <button>+</button>
+  </form>
