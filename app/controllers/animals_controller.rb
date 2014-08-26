@@ -8,4 +8,9 @@ class AnimalsController < ApplicationController
  		@animal = Animal.find(params[:id])
  		render('animals/show.html.erb')
  	end
+
+ 	def new
+ 		@animal = Animal.new(params[:animal])
+ 		render ('animals/new.html.erb')
+ 	end
 end

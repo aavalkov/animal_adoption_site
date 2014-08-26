@@ -1,0 +1,9 @@
+<h1><a href ="/animals">Four Paws</a></h1>
+<h2>Enter an animal into the system</h2>
+
+<%= render('layouts/errors', :object => @animal) %>
+
+<form action= "/animals" method ="post">
+	<%= render('form') %>
+ 	<button>+</button>
+</form>
