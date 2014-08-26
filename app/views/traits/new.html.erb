@@ -1,5 +1,12 @@
 <h1> Four Paws </h1>
 <h2>Animals Traits</h2>
+<p><strong>All Traits</strong></p>
+
+<ul>
+	<% @traits.each do |trait| %>
+		<li><%= trait.name %></li>
+		<% end %>
+</ul>
 
 <p><strong>Add a new trait</strong><p>
 	<%= render('layouts/errors', :object => @trait)%>
