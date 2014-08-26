@@ -3,5 +3,10 @@
 
 <h3><%= @trait.name %></h3>
 <p>All animals with this trait:</p>
+<ul>
+	<% @trait.animals.each do |animal|%>
+		<li><a href="/animals/<%= animal.id %>"><%= animal.name %></a></li>
+	<% end %>
+</ul>
 
 <p><a href="/traits/<%= @trait.id %>/edit">Edit Trait</a></p>
