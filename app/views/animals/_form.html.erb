@@ -1,25 +1,29 @@
 <div class="row">
-  <div class="form-group">
-    <label for "animal_name">Name</label>
-    <input id="animal_name" class="form-control" name="animal[name]" type="text" value="<%= @animal.name %>">
+  <div class = 'col-md-6'>
+    <div class="form-group">
+      <label for "animal_name">Name</label>
+      <input id="animal_name" class="form-control" name="animal[name]" type="text" value="<%= @animal.name %>">
+    </div>
+    <div class="form-group">
+      <label for "animal_age">Age</label>
+      <input id="animal_age" class="form-control" name="animal[age]" type="text" value="<%= @animal.age %>">
+    </div>
+    <div class="form-group">
+      <label for "animal_species">Species</label>
+      <input id="animal_species" class="form-control" name="animal[species]" type="text" value="<%= @animal.species %>">
+    </div>
+  </div>
+  <div class='col-md-1'>
+  </div>
+  <div class = 'col-md-5'>
+    <div class='form-group'>
+      <label for "trait_id">Traits</label>
+      <% @traits.each do |trait| %>
+          <div class = 'checkbox'>
+          <input id="trait_id" name="traits[]" type="checkbox" value="<%= trait.id %>"><%= trait.name %></input>
+      <% end %>
+    </div>  
   </div>
 </div>
-<div class="row">
-  <div class="form-group">
-    <label for "animal_age">Age</label>
-    <input id="animal_age" name="animal[age]" type="text" value="<%= @animal.age %>">
-  </div>
-  <div class="form-group">
-    <label for "animal_species">Species</label>
-    <input id="animal_species" name="animal[species]" type="text" value="<%= @animal.species %>">
-  </div>
-</div>
-<div class='row'>
-  <div class='form-group'>
-    <label for "trait_id">Traits</label>
-    <% @traits.each do |trait| %>
-    <input id="trait_id" name="traits[]" type="checkbox" value="<%= trait.id %>"><%= trait.name %></input>
-  <% end %>
-  </div>
-</div>
+
 
