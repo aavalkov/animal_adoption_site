@@ -1,17 +1,20 @@
-<h2>Edit Animal Information</h2>
+<div class='row'>	
+	<h2>Edit Animal Information</h2>
 
-<%= render('layouts/errors', :object => @animal) %>
-<p><strong>Current Traits</strong></p>
-	 <ul>
-	 	<% @animal.traits.each do |trait|%>
-	 		<li><%= trait.name %></li>
-	 	<% end %>
-	 </ul>
-<form action="/animals/<%= @animal.id %>" method="post">
-	<input name="_method" type="hidden" value="patch">
-	 <%= render('form') %>
-   <button class="btn btn-default">Update Animal</button>
-</form>
-
-<a href="/animals/<%= @animal.id %>" data-confirm="You sure?" data-method="delete" rel="nofollow">Delete</a>
+	<%= render('layouts/errors', :object => @animal) %>
+	<p><strong>Current Traits</strong></p>
+		 <ul>
+		 	<% @animal.traits.each do |trait|%>
+		 		<li><%= trait.name %></li>
+		 	<% end %>
+		 </ul>
+	<form action="/animals/<%= @animal.id %>" method="post">
+		<input name="_method" type="hidden" value="patch">
+		 <%= render('form') %>
+	   <button class="btn btn-default">Update Animal</button>
+	</form>
+</div>
+<div class ="row">
+	<a href="/animals/<%= @animal.id %>" data-confirm="You sure?" data-method="delete" rel="nofollow">Delete</a>
+</div>
 

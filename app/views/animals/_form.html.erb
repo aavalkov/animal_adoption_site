@@ -1,5 +1,5 @@
 <div class="row">
-  <div class = 'col-md-6'>
+  <div class ="col-md-6">
     <div class="form-group">
       <label for "animal_name">Name</label>
       <input id="animal_name" class="form-control" name="animal[name]" type="text" value="<%= @animal.name %>">
@@ -16,13 +16,14 @@
   <div class='col-md-1'>
   </div>
   <div class = 'col-md-5'>
-    <div class='form-group'>
-      <label for "trait_id">Traits</label>
-      <% @traits.each do |trait| %>
-          <div class = 'checkbox'>
-          <input id="trait_id" name="traits[]" type="checkbox" value="<%= trait.id %>"><%= trait.name %></input>
-      <% end %>
-    </div>  
+    <label>Traits</label>
+    <% @traits.each do |trait| %>
+      <div class="checkbox">
+        <label for "trait_id">
+          <input id="trait_id" name="traits[]" type="checkbox" value="<%= trait.id %>"><%= trait.name.capitalize %>
+        </label>
+      </div>
+    <%end%>
   </div>
 </div>
 

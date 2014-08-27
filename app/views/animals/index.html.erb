@@ -1,14 +1,14 @@
 <p>Welcome to our shelter; we have lots of pets that are ready to join your family.</p>
 <h3>Our Animals</h3>
 
-<dt>
+<dl>
 	<% @animals.each do |animal| %>
-		<dl><a href ="/animals/<%= animal.id %>"><%= animal.name %></a></dl>
+		<dt><a href ="/animals/<%= animal.id %>"><%= animal.name %></a></dt>
 	<% end %>
-</dt>
+</dl>
 
 <p>Come visit us today!</p>
 
 <footer>
-	<a href="/animals/new"><p>Add an animal</p></a>
+	<a href="/animals/new" class="btn btn-default">Add Animal</a>
 </footer>
