@@ -1,9 +1,10 @@
+	<h2>Enter an animal into the system</h2>
 
-<h2>Enter an animal into the system</h2>
+	<%= render('layouts/errors', :object => @animal) %>
 
-<%= render('layouts/errors', :object => @animal) %>
-
-<form action= "/animals" method ="post">
-	<%= render('form') %>
- 	<button class='btn btn-default'>Submit</button>
-</form>
+	<form action= "/animals" method ="post">
+		<%= render('form') %>
+	 	<button class='btn btn-default'>Submit</button>
+	</form>
+<footer id="new-animal">
+</footer>

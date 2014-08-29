@@ -5,7 +5,6 @@ class AnimalsController < ApplicationController
  	end
 
  	def show
- 		@traits = Trait.all
  		@animal = Animal.find(params[:id])
  		render('animals/show.html.erb')
  	end
@@ -33,12 +32,12 @@ class AnimalsController < ApplicationController
  	end
 
  	def edit
- 		@traits = Trait.all
  		@animal = Animal.find(params[:id])
  		render('animals/edit.html.erb')
  	end
 
  	def update
+ 		@traits = Trait.all
  		@animal = Animal.find(params[:id])
  		if @animal.update(params[:animal])
  			flash[:notice] = "The animal was updated."

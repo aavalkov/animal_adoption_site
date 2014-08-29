@@ -1,13 +1,12 @@
-<h1><a href ="/animals">Four Paws</a></h1>
+<div class='col-md-6'>
+	<h2>Edit Trait</h2>
 
-<h2>Edit Trait</h2>
-
-<%= render('layouts/errors', :object => @trait) %>
-
-<form action="/traits/<%= @trait.id %>" method="post">
-	<input name="_method" type="hidden" value="patch">
-	 <%= render('form') %>
-   <button>Update Trait</button>
-</form>
-
-<a href="/traits/<%= @trait.id %>" data-confirm="You sure?" data-method="delete" rel="nofollow">Delete</a>
+	<%= render('layouts/errors', :object => @trait) %>
+	
+	<form action="/traits/<%= @trait.id %>" method="post">
+		<input name="_method" type="hidden" value="patch">
+		<%= render('form') %>
+	  <button class="btn btn-default">Update Trait</button>
+		<a href="/traits/<%= @trait.id %>" data-confirm="You sure?" data-method="delete" rel="nofollow" class="btn btn-danger">Delete</a>
+	</form>
+</div>

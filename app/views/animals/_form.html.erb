@@ -15,9 +15,10 @@
   </div>
   <div class='col-md-1'>
   </div>
+
   <div class = 'col-md-5'>
     <label>Traits</label>
-    <% @traits.each do |trait| %>
+    <% Trait.all.each do |trait| %>
       <div class="checkbox">
         <label for "trait_id">
           <input id="trait_id" name="traits[]" type="checkbox" value="<%= trait.id %>"><%= trait.name.capitalize %>

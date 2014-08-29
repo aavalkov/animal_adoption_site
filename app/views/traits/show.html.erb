@@ -1,12 +1,15 @@
+<body id="trait-picture">
+<h2><a href ="/traits">Trait</a></h2>
 
-<h2><a href ="/traits">Traits</a></h2>
-
-<h3><%= @trait.name %></h3>
-<p>All animals with this trait:</p>
+<h3>--<%= @trait.name %></h3>
+</br>
+<h4>All animals with this trait:</h4>
 <ul>
 	<% @trait.animals.each do |animal|%>
-		<li><a href="/animals/<%= animal.id %>"><%= animal.name %></a></li>
+		<li><strong><a href="/animals/<%= animal.id %>"><%= animal.name %></a></strong></li>
 	<% end %>
 </ul>
 
-<p><a href="/traits/<%= @trait.id %>/edit">Edit Trait</a></p>
+<p><a href="/traits/<%= @trait.id %>/edit" class="btn btn-default">Edit Trait</a></p>
+</body>
+

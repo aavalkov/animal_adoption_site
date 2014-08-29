@@ -1,5 +1,4 @@
 class TraitsController < ApplicationController
-	
 	def new
 		@traits = Trait.all
 		@trait = Trait.new(params[:trait])
@@ -42,6 +41,4 @@ class TraitsController < ApplicationController
 		flash[:notice] = "Trait was successfully deleted."
 		redirect_to("/traits/")
 	end
-
-
 end
