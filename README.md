@@ -39,7 +39,7 @@ $ rails s
 ```
 It should now be available at `localhost:3000`.
 
-It is also available on http://animal-adoption-site.herokuapp.com/
+It is also available on http://animal-adoption-website.herokuapp.com/
 
 ##License
 MIT
